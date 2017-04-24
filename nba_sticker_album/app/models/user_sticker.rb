@@ -1,0 +1,2 @@
+class UserSticker < ApplicationRecord
+end

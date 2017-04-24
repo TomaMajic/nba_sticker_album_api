@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user_id: MyString
+  year: MyString
+  title: MyString
+  total_stickers: MyString
+
+two:
+  user_id: MyString
+  year: MyString
+  title: MyString
+  total_stickers: MyString
