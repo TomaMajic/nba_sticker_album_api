@@ -1,5 +1,5 @@
 class Album < ApplicationRecord
 
-	belongs_to_one :user
+	belongs_to :user
 	has_many :stickers
 end
