@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170504192614) do
+ActiveRecord::Schema.define(version: 20170505142231) do
 
   create_table "albums", force: :cascade do |t|
     t.integer  "user_id"
@@ -28,6 +28,7 @@ ActiveRecord::Schema.define(version: 20170504192614) do
     t.datetime "created_at",   null: false
     t.datetime "updated_at",   null: false
     t.string   "sticker_path"
+    t.string   "name"
   end
 
   create_table "user_stickers", force: :cascade do |t|
@@ -43,6 +44,7 @@ ActiveRecord::Schema.define(version: 20170504192614) do
     t.string   "password_digest"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
+    t.integer  "coins"
   end
 
 end
