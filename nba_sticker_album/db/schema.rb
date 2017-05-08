@@ -10,10 +10,9 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170505163819) do
+ActiveRecord::Schema.define(version: 20170508144017) do
 
   create_table "albums", force: :cascade do |t|
-    t.integer  "user_id"
     t.integer  "year"
     t.string   "title"
     t.integer  "total_stickers"
@@ -25,18 +24,27 @@ ActiveRecord::Schema.define(version: 20170505163819) do
     t.string   "album_id"
     t.integer  "number"
     t.string   "description"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
     t.string   "sticker_path"
     t.string   "name"
     t.string   "club"
+    t.string   "external_link"
+  end
+
+  create_table "user_albums", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "album_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_stickers", force: :cascade do |t|
     t.integer  "user_id"
     t.integer  "sticker_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.boolean  "is_tradeable"
   end
 
   create_table "users", force: :cascade do |t|

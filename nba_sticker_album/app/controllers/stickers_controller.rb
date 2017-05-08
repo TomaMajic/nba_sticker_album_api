@@ -46,6 +46,6 @@ class StickersController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def sticker_params
-      params.require(:sticker).permit(:album_id, :number, :description)
+      params.require(:sticker).permit(:album_id, :number, :description, :name, :club, :sticker_path)
     end
 end
